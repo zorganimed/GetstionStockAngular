@@ -1,0 +1,21 @@
+<h1 align="center">Liste Providers</h1>
+  <table align="center" class="table table-striped">
+    <tr>
+    <th>Name</th>
+    <th>Adress</th>
+    <th>Email</th>
+    <th>Suppression</th>
+    <th>Modification</th>
+  </tr>
+
+  <tr *ngFor="let provider of providers">
+    <td>{{provider.name}}</td>
+    <td>{{provider.adress}}</td>
+    <td>{{provider.email}}</td>
+    <button (click)="deleteProvider(provider)" class="btn btn-danger">Supprimer</button>
+    <button (click)="updateProvider(provider)" class="btn btn-warning">Update</button>
+
+
+  </tr>
+  </table>
+
